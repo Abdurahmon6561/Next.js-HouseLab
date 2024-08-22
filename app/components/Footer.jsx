@@ -9,16 +9,16 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-[#0e685a] md:h-[350px]">
+    <div className="bg-[#0e685a] md:h-[290px]">
       <div className="p-8">
         <div className="flex flex-col md:flex-row justify-between">
           <Image
             src={Footer_logo}
             alt="logo"
-            className="w-[260px] md:mt-[-60px] ml-[30px] mx-auto md:mx-0"
+            className="w-[260px] md:mt-0 ml-[30px] mx-auto md:mx-0"
           />
           <div className="mt-4 md:mt-0 md:ml-[10px]">
-            <div className="flex flex-row md:flex-row items-start md:items-center mt-4 mb-[20px] md:mb-[40px]">
+            <div className="flex flex-row md:flex-row items-start md:items-center mt-4 mb-[20px] md:mb-[40px] md:ml-[98px]">
               <Image
                 src={Location_image}
                 alt="image"
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <div className=" md:mr-[-90px] flex flex-col md:flex-row md:justify-around">
               <div className="flex items-center mb-2 md:mb-0">
-                <Image src={Phone_image} alt="image" className=" ml-[-149px] mr-[-163px] h-[20px] md:ml-[55px]" />
+                <Image src={Phone_image} alt="image" className=" ml-[-149px] mr-[-163px] h-[20px] md:ml-[155px]" />
                 <a
                   className="text-white font-semibold text-base md:ml-[-166px] md:text-xl ml-2"
                   href="tel:+998712001133"
@@ -38,13 +38,13 @@ const Footer = () => {
                   +998 71 200 11 33
                 </a>
               </div>
-              <div className="flex items-center mr-[203px] md:mr-[71px]">
-                <Image src={Mail} alt="image" className="h-[20px] ml-[16px] md:ml-[-130px]" />
+              <div className="flex items-center mt-3 md:mt-0 mr-[203px] md:mr-[71px]">
+                <Image src={Mail} alt="image" className="h-[20px] ml-[25px] md:ml-[-130px]" />
                 <a
                   href="mailto:info@ritm.uz"
                   className="text-white md:ml-[-251px] font-semibold text-base md:text-xl ml-2"
                 >
-                  info@ritm.uz
+                  houselab@gmail.com
                 </a>
               </div>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
       <hr className="opacity-55 mt-[30px] w-full" />
       <div className="flex flex-col md:flex-row justify-between items-center mt-4">
-        <h3 className="text-white hidden md:block md:ml-[100px] text-sm md:text-[17px] opacity-80">
+        <h3 className="text-white hidden md:block md:ml-[25px] text-sm md:text-[17px] opacity-80">
           © 2024 Copyright. HouseLab. Все права защищены.
         </h3>
 
