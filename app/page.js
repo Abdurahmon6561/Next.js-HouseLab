@@ -80,11 +80,11 @@ const Home = () => {
 
           <div className="relative z-10 w-screen p-10 flex items-center justify-between">
             <div>
-            <Image className="w-[170px] cursor-pointer" src={Logo} alt="Logo" />
+           <Image className="w-[170px] cursor-pointer" src={Logo} alt="Logo" />
             </div>
             <div className="hidden md:flex flex-1 ml-[150px] justify-center">
-              <ul className="flex space-x-4 ">
-                <li className="text-black p-2 font-semibold cursor-pointer relative group hover:text-gray-700">
+              {/* <ul className="flex space-x-4 ">
+               <li className="text-black p-2 font-semibold cursor-pointer relative group hover:text-gray-700">
                   О проекте
                   <span className="absolute left-1/2 bottom-0 w-full h-[1px] bg-black transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                 </li>
@@ -96,7 +96,7 @@ const Home = () => {
                   Тарифы
                   <span className="absolute left-1/2 bottom-0 w-full h-[1px] bg-black transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="flex space-x-2 ml-[-60px]">
               <a
@@ -195,7 +195,7 @@ const Home = () => {
                 </button>
               </div>
               <ul className="flex flex-col mt-[-20px] p-4 space-y-4">
-                <li className="text-white p-2 font-semibold cursor-pointer relative group hover:text-gray-400">
+                {/* <li className="text-white p-2 font-semibold cursor-pointer relative group hover:text-gray-400">
                   О проекте
                   <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </li>
@@ -206,7 +206,7 @@ const Home = () => {
                 <li className="text-white p-2 font-semibold cursor-pointer relative group hover:text-gray-400">
                   Тарифы
                   <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-                </li>
+                </li> */}
                 <div className=" flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
