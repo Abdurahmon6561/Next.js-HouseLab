@@ -2,32 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+/* Call icons */
+@keyframes vibrate {
+  0%, 100% { transform: translate(0); }
+  20%, 60% { transform: translate(-1px, 1px); }
+  40%, 80% { transform: translate(1px, -1px); }
+}
+
+.hover\:animate-vibrate-once:hover {
+  animation: vibrate 0.2s linear 1;
+}
+/* Arrow */
+.arrow-icon {
+  width: 70px; /* Adjust the size as needed */
+  height: 70px; /* Adjust the size as needed */
+  filter: invert(32%) sepia(85%) saturate(5200%) hue-rotate(80deg) brightness(90%) contrast(95%);
+}
+
+/* AboutProject */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.animate-slide-in {
+  animation: slideInFromRight 1s ease-out;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Sistem */
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+  }
+  
+  /* Prezentation */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
+
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+  /* Animation line */
+/* 1 */
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .animate-draw path {
+    
+    animation: draw 5s linear forwards;
+  }

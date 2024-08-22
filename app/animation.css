@@ -1,0 +1,19 @@
+/* .animate-draw */
+.path{
+    stroke-dasharray:2755.800048828125;
+    stroke-dashoffset:2755.800048828125;
+    -webkit-animation:dash 5s linear alternate infinite;
+       -moz-animation:dash 5s linear forwards;
+        -ms-animation:dash 5s linear forwards;
+         -o-animation:dash 5s linear forwards;
+            animation:dash 5s alternate infinite;
+    }
+    @keyframes dash{
+    from {
+        stroke-dashoffset: -2755.800048828125;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
