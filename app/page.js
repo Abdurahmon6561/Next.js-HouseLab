@@ -80,7 +80,11 @@ const Home = () => {
 
           <div className="relative z-10 w-screen p-10 flex items-center justify-between">
             <div>
-           <Image className="w-[170px] cursor-pointer" src={Logo} alt="Logo" />
+              <Image
+                className="w-[170px] cursor-pointer"
+                src={Logo}
+                alt="Logo"
+              />
             </div>
             <div className="hidden md:flex flex-1 ml-[150px] justify-center">
               {/* <ul className="flex space-x-4 ">
@@ -119,12 +123,15 @@ const Home = () => {
                 </svg>
                 +998 71 200 11 33
               </a>
-              <button
-                onClick={() => (window.location.href = "https://gohouse.uz")}
+
+              <a
+                href="https://app.houselab.uz/"
                 className="hover:bg-slate-200 p-2 rounded-2xl text-[#28a18f] font-medium border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
+                target="_blank"
               >
                 Войти
-              </button>
+              </a>
+
               <button
                 onClick={handleScrollToObjects}
                 className="bg-[#28a18f] hover:bg-[#197063] p-2 rounded-2xl text-white border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
@@ -229,11 +236,10 @@ const Home = () => {
                 </div>
               </ul>
               <div className="p-4">
-                <button
-                  onClick={() => (window.location.href = "https://gohouse.uz")}
-                  className="hover:bg-slate-200 w-full p-2 rounded-2xl text-[#28a18f] border-[#28a18f] border-2 transition-transform ease-in-out transform"
-                >
-                  Войти
+                <button className="hover:bg-slate-200 w-full p-2 rounded-2xl text-[#28a18f] border-[#28a18f] border-2 transition-transform ease-in-out transform">
+                  <a href="https://app.houselab.uz/" target="_blank">
+                    Войти
+                  </a>
                 </button>
                 <button
                   onClick={handleScrollToObjects}
@@ -270,7 +276,7 @@ const Home = () => {
           <Sale />
           <Reviews />
           <div ref={objectsRef}>
-          <Demo />
+            <Demo />
           </div>
           <Footer />
         </div>

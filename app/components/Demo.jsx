@@ -1,52 +1,55 @@
-import Image from 'next/image';
-import '../globals.css';
+import Image from "next/image";
+import "../globals.css";
 
 const Demo = () => {
   return (
-    <div className="flex  flex-col md:flex-row justify-around bg-slate-100 p-8">
-      <div className="mt-[90px] md:mt-[90px] md:mr-[-301px]">
-        <h2 className="text-4xl font-bold mb-4 text-gray-700 text-center">
-          Закажите бесплатную <br /> консультацию по работе <br /> программы!
-        </h2>
-      </div>
-      <Image
-        src="https://ritm.uz/static/media/arrow.324d7eda.svg"
-        className="arrow-icon hidden md:block mt-[24px]"
-        alt="arrow"
-        width={10}
-        height={10}
-      />
-      <div className="h-[250px] w-[370px] mt-[40px] md:ml-[-293px] ">
-        <div className="mb-4">
-          <label htmlFor="name" className="block mb-2 opacity-80">
-            Ваше имя
-          </label>
-          <input
-            className="outline-none border-2 w-[360px] p-3 rounded-lg"
-            type="text"
-            id="name"
-            placeholder="Ваше имя"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="number" className="block mb-2 opacity-80">
-            Номер телефона
-          </label>
-          <input
-            className="outline-none border-2 w-[360px] p-3 rounded-lg"
-            type="number"
-            id="number"
-            placeholder="Номер телефона"
-          />
-        </div>
-        <button
-          className="font-medium bg-[#28a18f] hover:bg-[#197063] w-[360px] mt-2 p-3 rounded-xl text-white"
-          type="button"
-        >
-          Отправить заявку
-        </button>
-      </div>
-    </div>
+    <div className="container gap-4 md:gap-[60px] relative mx-auto flex flex-col md:flex-row items-center justify-center mt-8 mb-8 md:mt-[80px] md:mb-[180px]">
+  <div className="text-center md:text-center">
+    <p className="font-semibold text-xl md:text-4xl text-[#28a18f]">
+      Закажите бесплатную <br /> консультацию по работе <br /> программы!
+    </p>
+  </div>
+  <div className="hidden md:block mt-[-150px]">
+    <Image
+      src="https://ritm.uz/static/media/arrow.324d7eda.svg"
+      className="arrow-icon hidden md:block mt-[24px]"
+      alt="arrow"
+      width={10}
+      height={10}
+    />
+  </div>
+  <div className="w-[350px] md:w-[400px] mt-8 md:mt-0">
+    <label htmlFor="name" className="text-[16px] md:text-[18px]">
+      Ваше имя
+    </label>
+    <br />
+    <input
+      type="text"
+      id="name"
+      placeholder="Ваше имя"
+      className="w-full h-[50px] md:h-[60px] p-2 rounded-lg outline-none border-4 border-opacity-55 border-[#28a18f]"
+    />
+    <br />
+    <br />
+    <label htmlFor="number" className="text-[16px] md:text-[18px]">
+      Номер телефона
+    </label>
+    <br />
+    <input
+      type="number"
+      id="number"
+      placeholder="Номер телефона"
+      className="w-full h-[50px] md:h-[60px] p-2 rounded-lg outline-none border-4 border-opacity-55 border-[#28a18f]"
+    />
+    <button
+      type="button"
+      className="w-full h-[50px] md:h-[60px] bg-[#28a18f] text-white font-semibold rounded-lg outline-none mt-[20px] md:mt-[30px] hover:bg-[#3d877c]"
+    >
+      Отправить заявку
+    </button>
+  </div>
+</div>
+
   );
 };
 
