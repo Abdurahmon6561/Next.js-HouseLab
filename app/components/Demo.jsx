@@ -18,7 +18,7 @@ const Demo = () => {
       height={10}
     />
   </div>
-  <div className="w-[350px] md:w-[400px] mt-8 md:mt-0">
+  <div className="w-full px-10 md:w-[400px] mt-8 md:mt-0">
     <label htmlFor="name" className="text-[16px] md:text-[18px]">
       Ваше имя
     </label>
@@ -52,4 +52,5 @@ const Demo = () => {
 
   );
 };
+
 export default Demo;
