@@ -35,11 +35,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" content-center container">
       <div className="w-screen h-screen overflow-x-hidden">
         <div className="w-screen h-screen relative bg-[#f8fcfb]">
           {/* Background Animation */}
-          <div className="absolute inset-0 z-0 overflow-hidden mt-[250px] ml-[350px]">
+          <div className="absolute inset-0 z-0 overflow-hidden mt-[320px] ml-[50px] md:ml-[80px] md:mt-[200px]">
             <svg
               version="1.1"
               id="Layer_1"
@@ -47,10 +47,11 @@ const Home = () => {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               x="0px"
               y="0px"
-              width="90%"
-              height="600"
+              width="100vw" 
+              height="100vh" 
               viewBox="0 0 1000 600"
               xmlSpace="preserve"
+              className="absolute top-0 left-0"
             >
               <path
                 className="path animate-draw"
@@ -59,26 +60,27 @@ const Home = () => {
                 strokeWidth="2"
                 strokeOpacity="0.6"
                 d="M789.578,465l0.238-88.323v-7.908l-3.391-0.566l-0.941-25.612l0.189,25.612
-                l-4.145,0.188l-6.968-4.709h-7.722l-0.188-16.761l-9.04-2.261l-15.632,1.319l-4.143,0.565l-0.187,2.636l-6.216,1.318l-0.378,40.115
-                l-4.142,0.188l-0.19-33.523l-13.183-1.506l-17.136,3.013v2.638h-6.028l-0.377-13.56l-8.662-0.753l-15.632,3.201v11.487
-                l-34.087-3.578v-2.826l-15.067-0.188l-0.375-12.807l-5.462-0.375l-11.487-9.04l-11.863,11.675l-3.016,0.189l0.188,36.536
-                l-1.319-0.188l-0.188,1.506l-3.955,0.189v3.201l-2.637,0.377v13.559l-5.65-0.188v-12.807l-5.837-0.188l-2.449-170.248l-5.084-3.579
-                l-2.315,0.235l-1.882-79.411l-0.514,0.435l-1.218,79.341l-7.067,0.717l-14.499,9.793l-0.19,5.461l-1.13-0.376l0.378,53.674
-                l-20.527,0.188l0.563,72.505l-16.008,5.65l0.188,25.612h-3.576v-70.812l-5.086-2.824l-9.982-1.506l-0.188-7.721h-9.039l-0.188,6.966
-                l-3.016,0.565l-9.415,7.344v37.29l-17.514-4.143l-1.131-0.188v-33.524l-1.507-0.376l-12.805-14.501l-2.26,0.941l-0.19-5.085
-                l-0.753-2.07l-0.565-10.923l-1.316-3.014l0.375,21.658h-6.024l-0.755,5.839l-2.069-0.188l-0.191,8.661v80.981l-4.143,0.189
-                l-0.187-19.964c0,0,0,0-1.886,0c-0.375-1.507-1.695-3.39-1.695-3.39h-13.37l-0.189,2.637l-0.94,0.188l-3.767,1.883l-0.377,17.138
-                l-17-0.45c-0.142-36.335-0.142-36.376-0.142-36.376l-5.677-0.142l-0.141-5.673l-16.034-0.146l0.143,5.678l-3.547,0.142
-                c0,0,0.426-20.29,0.142-21.85c0-0.852-2.129-3.406-13.621-3.121c0-12.631,0-12.631,0-12.631l-21.284,0.143v12.347h-14.898v35.326
-                l-9.081,0.146c0,0-0.144-63.852-0.144-67.823c-0.708-2.129-3.688-17.455-82.863-12.346c0,27.809,0,27.809,0,27.809l-16.318,0.143
-                l-0.141,15.041h-18.021l-0.284,19.863h-12.486l-0.143-79.74c0,0,1.703-0.569,1.136-4.966c0,0.707-3.264,1.56-3.407-5.534
-                c-0.282-1.42-8.655,1.135-9.221-9.084c-0.853-47.249-0.853-47.249-0.853-47.249l-1.418,47.534c0,0,2.128,8.229-15.041,8.514
-                c-0.142,1.842-0.142,1.842-0.142,1.842l-2.696,0.285v4.682l0..."
+      l-4.145,0.188l-6.968-4.709h-7.722l-0.188-16.761l-9.04-2.261l-15.632,1.319l-4.143,0.565l-0.187,2.636l-6.216,1.318l-0.378,40.115
+      l-4.142,0.188l-0.19-33.523l-13.183-1.506l-17.136,3.013v2.638h-6.028l-0.377-13.56l-8.662-0.753l-15.632,3.201v11.487
+      l-34.087-3.578v-2.826l-15.067-0.188l-0.375-12.807l-5.462-0.375l-11.487-9.04l-11.863,11.675l-3.016,0.189l0.188,36.536
+      l-1.319-0.188l-0.188,1.506l-3.955,0.189v3.201l-2.637,0.377v13.559l-5.65-0.188v-12.807l-5.837-0.188l-2.449-170.248l-5.084-3.579
+      l-2.315,0.235l-1.882-79.411l-0.514,0.435l-1.218,79.341l-7.067,0.717l-14.499,9.793l-0.19,5.461l-1.13-0.376l0.378,53.674
+      l-20.527,0.188l0.563,72.505l-16.008,5.65l0.188,25.612h-3.576v-70.812l-5.086-2.824l-9.982-1.506l-0.188-7.721h-9.039l-0.188,6.966
+      l-3.016,0.565l-9.415,7.344v37.29l-17.514-4.143l-1.131-0.188v-33.524l-1.507-0.376l-12.805-14.501l-2.26,0.941l-0.19-5.085
+      l-0.753-2.07l-0.565-10.923l-1.316-3.014l0.375,21.658h-6.024l-0.755,5.839l-2.069-0.188l-0.191,8.661v80.981l-4.143,0.189
+      l-0.187-19.964c0,0,0,0-1.886,0c-0.375-1.507-1.695-3.39-1.695-3.39h-13.37l-0.189,2.637l-0.94,0.188l-3.767,1.883l-0.377,17.138
+      l-17-0.45c-0.142-36.335-0.142-36.376-0.142-36.376l-5.677-0.142l-0.141-5.673l-16.034-0.146l0.143,5.678l-3.547,0.142
+      c0,0,0.426-20.29,0.142-21.85c0-0.852-2.129-3.406-13.621-3.121c0-12.631,0-12.631,0-12.631l-21.284,0.143v12.347h-14.898v35.326
+      l-9.081,0.146c0,0-0.144-63.852-0.144-67.823c-0.708-2.129-3.688-17.455-82.863-12.346c0,27.809,0,27.809,0,27.809l-16.318,0.143
+      l-0.141,15.041h-18.021l-0.284,19.863h-12.486l-0.143-79.74c0,0,1.703-0.569,1.136-4.966c0,0.707-3.264,1.56-3.407-5.534
+      c-0.282-1.42-8.655,1.135-9.221-9.084c-0.853-47.249-0.853-47.249-0.853-47.249l-1.418,47.534c0,0,2.128,8.229-15.041,8.514
+      c-0.142,1.842-0.142,1.842-0.142,1.842l-2.696,0.285v4.682l0..."
               />
             </svg>
           </div>
+          {/* Background Animation */}
 
-          <div className="relative z-10 w-screen p-10 flex items-center justify-between">
+          <div className="fixed top-0 left-0 right-0 container mx-auto z-10 w-full p-3 flex items-center justify-between backdrop-blur bg-white/50">
             <div>
               <Image
                 className="w-[170px] cursor-pointer"
@@ -86,23 +88,8 @@ const Home = () => {
                 alt="Logo"
               />
             </div>
-            <div className="hidden md:flex flex-1 ml-[150px] justify-center">
-              {/* <ul className="flex space-x-4 ">
-               <li className="text-black p-2 font-semibold cursor-pointer relative group hover:text-gray-700">
-                  О проекте
-                  <span className="absolute left-1/2 bottom-0 w-full h-[1px] bg-black transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                </li>
-                <li className="text-black p-2 font-semibold cursor-pointer relative group hover:text-gray-700">
-                  О компании
-                  <span className="absolute left-1/2 bottom-0 w-full h-[1px] bg-black transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                </li>
-                <li className="text-black p-2 font-semibold cursor-pointer relative group hover:text-gray-700">
-                  Тарифы
-                  <span className="absolute left-1/2 bottom-0 w-full h-[1px] bg-black transform -translate-x-1/2 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                </li>
-              </ul> */}
-            </div>
-            <div className="flex space-x-2 ml-[-60px]">
+            <div className="hidden md:flex flex-1 ml-[150px] justify-center"></div>
+            <div className="flex gap-2 ml-[-60px]">
               <a
                 href="tel:+998712001133"
                 className="hidden md:flex items-center mr-[10px]"
@@ -113,7 +100,7 @@ const Home = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="#28a18f"
-                  className="size-5 hover:animate-vibrate-once"
+                  className="w-[22px] hover:animate-vibrate-once"
                 >
                   <path
                     strokeLinecap="round"
@@ -180,7 +167,7 @@ const Home = () => {
                 isMenuOpen ? "translate-x-0" : "translate-x-full"
               } md:hidden`}
             >
-              <div className="flex ml-[167px] mt-[2px] p-6">
+              <div className="flex ml-[185px] mt-[-5px] p-8">
                 <button
                   onClick={() => setIsMenuOpen(false)}
                   className="text-white"
@@ -202,18 +189,6 @@ const Home = () => {
                 </button>
               </div>
               <ul className="flex flex-col mt-[-20px] p-4 space-y-4">
-                {/* <li className="text-white p-2 font-semibold cursor-pointer relative group hover:text-gray-400">
-                  О проекте
-                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-                </li>
-                <li className="text-white p-2 font-semibold cursor-pointer relative group hover:text-gray-400">
-                  О компании
-                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-                </li>
-                <li className="text-white p-2 font-semibold cursor-pointer relative group hover:text-gray-400">
-                  Тарифы
-                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
-                </li> */}
                 <div className=" flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +196,7 @@ const Home = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="#28a18f"
-                    className="size-5 mt-[3px]"
+                    className="w-[22px] mt-[3px]"
                   >
                     <path
                       strokeLinecap="round"
@@ -250,27 +225,30 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="mt-[80px] text-center py-10 bg-[#f8f9fc] px-4 sm:px-6 lg:px-8">
-            <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight mb-4 text-gray-900">
-              Простая и недорогая онлайн-платформа для <br /> продажи
-              недвижимости
-            </h2>
-            <h3 className="relative text-base sm:text-lg md:text-xl w-full max-w-4xl mx-auto text-gray-600 mb-8">
-              Интуитивно понятный интерфейс, который полностью удовлетворяет
-              потребности в продаже недвижимости. Стоимость ниже, чем у других
-              решений на рынке. Запишитесь на демонстрацию, чтобы увидеть
-              платформу в действии.
-            </h3>
-            <button
-              onClick={handleScrollToObjects}
-              className="relative cursor-pointer w-full max-w-xs bg-[#28a18f] text-white py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-[#197063] transition duration-300"
-            >
-              Записаться на демо
-            </button>
+
+          <div className="container relative mx-auto flex items-center justify-center min-h-screen ">
+            <div className=" text-center py-10 px-4 sm:px-6 lg:px-8">
+              <h2 className="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl leading-tight mb-4 text-gray-900">
+                Простая и недорогая онлайн-платформа для <br /> продажи
+                недвижимости
+              </h2>
+              <h3 className="relative text-base sm:text-lg md:text-xl w-full max-w-4xl mx-auto text-gray-600 mb-8">
+                Интуитивно понятный интерфейс, который полностью удовлетворяет
+                потребности в продаже недвижимости. Стоимость ниже, чем у других
+                решений на рынке. Запишитесь на демонстрацию, чтобы увидеть
+                платформу в действии.
+              </h3>
+              <button
+                onClick={handleScrollToObjects}
+                className="relative cursor-pointer w-full max-w-xs bg-[#28a18f] text-white py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-[#197063] transition duration-300"
+              >
+                Записаться на демо
+              </button>
+            </div>
           </div>
         </div>
 
-        <div>
+        <div className="">
           <Sistem />
           <Objects />
           <Sale />
