@@ -24,7 +24,7 @@ const Footer = () => {
             <Image
               src={Location_image}
               alt="location_image"
-              className="w-[30px] md:w-[40px]"
+              className="w-[30px] md:w-[36px] md:ml-1"
             />
             <p className="text-white text-sm md:text-[18px] md:mt-1 ml-2">
               Узбекистан, Ташкент, Мизро-Улугбекский район.
