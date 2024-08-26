@@ -35,7 +35,7 @@ const Footer = () => {
               <Image
                 src={Phone_image}
                 alt="phone_image"
-                className="w-[23px] md:w-[30px] md:ml-2 hover:animate-vibrate-onces"
+                className="w-[20px] md:w-[30px] md:ml-2 hover:animate-vibrate-onces"
               />
               <a
                 href="tel:+998712001133"
@@ -48,7 +48,7 @@ const Footer = () => {
               <Image
                 src={Mail}
                 alt="mail_image"
-                className="w-[23px] md:w-[28px] md:mt-4"
+                className="w-[20px] md:w-[28px] md:mt-4"
               />
               <a
                 href="mailto:hi@houselab.uz"
