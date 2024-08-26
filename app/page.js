@@ -116,7 +116,7 @@ const Home = () => {
                 className="hover:bg-slate-200 p-2 rounded-2xl text-[#28a18f] font-medium border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
                 target="_blank"
               >
-                Login
+                Войти
               </a>
               <button
                 onClick={handleScrollToObjects}
@@ -212,7 +212,7 @@ const Home = () => {
               <div className="p-4">
                 <button className="hover:bg-slate-200 w-full p-2 rounded-2xl text-[#28a18f] border-[#28a18f] border-2 transition-transform ease-in-out transform">
                   <a href="https://app.houselab.uz/" target="_blank">
-                    Войти
+                   Login
                   </a>
                 </button>
                 <button
