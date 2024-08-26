@@ -7,7 +7,6 @@ html {
 }
 
 
-/* Call icons */
 @keyframes vibrate {
   0%, 100% { transform: translate(0); }
   20%, 60% { transform: translate(-1px, 1px); }
@@ -17,6 +16,7 @@ html {
 .hover\:animate-vibrate-once:hover {
   animation: vibrate 0.2s linear 1;
 }
+
 /* Arrow */
 .arrow-icon {
   width: 70px; /* Adjust the size as needed */

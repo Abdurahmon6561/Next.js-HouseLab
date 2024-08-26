@@ -9,85 +9,108 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-[#0e685a] md:h-[290px]">
-      <div className="p-8">
-        <div className="flex flex-col md:flex-row justify-between">
+   <div className="bg-[#0e685a]">
+     <div className=" md:h-[230px] p-4 md:p-6 container mx-auto">
+      <div className="flex flex-col md:flex-row justify-between">
+        <div className="mb-4 md:mb-0">
           <Image
             src={Footer_logo}
-            alt="logo"
-            className="w-[260px] md:mt-0 ml-[30px] mx-auto md:mx-0"
+            alt="logo_image"
+            className="mx-auto w-[170px] md:mt-6 md:w-[220px] md:mx-0"
           />
-          <div className="mt-4 md:mt-0 md:ml-[10px]">
-            <div className="flex flex-row md:flex-row items-start md:items-center mt-4 mb-[20px] md:mb-[40px] md:ml-[98px]">
+        </div>
+        <div className="space-y-4 md:space-y-0">
+          <div className="flex items-center">
+            <Image
+              src={Location_image}
+              alt="location_image"
+              className="w-[30px] md:w-[40px]"
+            />
+            <p className="text-white text-sm md:text-[18px] md:mt-1 ml-2">
+              Узбекистан, Ташкент, Мизро-Улугбекский район.
+            </p>
+          </div>
+          <div className="flex flex-col ml-1 md:ml-0 md:flex-row space-y-4 md:space-y-0 md:space-x-7">
+            <div className="flex items-center md:mt-4">
               <Image
-                src={Location_image}
-                alt="image"
-                className="mt-1 w-[20px] md:w-[30px] md:ml-[377px] md:mr-[-262px] h-[20px] ml-[25px] mr-[-158px] md:h-[30px]"
+                src={Phone_image}
+                alt="phone_image"
+                className="w-[23px] md:w-[30px] md:ml-2 hover:animate-vibrate-onces"
               />
-              <h3 className=" md:ml-[273px] md:mt-2 ml-[170px] text-base md:text-xl font-normal text-white">
-                Узбекистан, Ташкент, Мизро-Улугбекский район
-              </h3>
+              <a
+                href="tel:+998712001133"
+                className="text-white text-sm md:text-xl  md:ml-2 ml-2"
+              >
+                +998 71 200 11 33
+              </a>
             </div>
-            <div className=" md:mr-[-90px] flex flex-col md:flex-row md:justify-around">
-              <div className="flex items-center mb-2 md:mb-0">
-                <Image src={Phone_image} alt="image" className=" ml-[-149px] mr-[-163px] h-[20px] md:ml-[155px]" />
-                <a
-                  className="text-white font-semibold text-base md:ml-[-166px] md:text-xl ml-2"
-                  href="tel:+998712001133"
-                >
-                  +998 71 200 11 33
-                </a>
-              </div>
-              <div className="flex items-center mt-3 md:mt-0 mr-[203px] md:mr-[71px]">
-                <Image src={Mail} alt="image" className="h-[20px] ml-[25px] md:ml-[-130px]" />
-                <a
-                  href="mailto:info@ritm.uz"
-                  className="text-white md:ml-[-251px] font-semibold text-base md:text-xl ml-2"
-                >
-                  houselab@gmail.com
-                </a>
-              </div>
+            <div className="flex items-center">
+              <Image
+                src={Mail}
+                alt="mail_image"
+                className="w-[20px] md:w-[25px] md:mt-4"
+              />
+              <a
+                href="mailto:hi@houselab.uz"
+                className="text-white text-sm md:text-xl md:mt-4 md:ml-2 ml-2"
+              >
+                hi@houselab.uz
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <hr className="opacity-55 mt-[30px] w-full" />
-      <div className="flex flex-col md:flex-row justify-between items-center mt-4">
-        <h3 className="text-white hidden md:block md:ml-[25px] text-sm md:text-[17px] opacity-80">
-          © 2024 Copyright. HouseLab. Все права защищены.
-        </h3>
-
-        <div className="flex space-x-4 md:mr-[160px] mt-2 md:mt-0 mb-[20px]">
+      <hr className="opacity-80 mt-6 md:mt-7 mb-6 md:mb-9" />
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="md:mb-4">
+          <p className="text-white text-sm md:text-base hidden md:block md:ml-0 opacity-80 text-center md:text-left">
+            © 2024 Copyright. HouseLab. Все права защищены.
+          </p>
+        </div>
+        <div className="flex space-x-3 md:mt-[-15px]">
           <button
+            className="hover:scale-110 transition-transform w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
             onClick={() => (window.location.href = "https://t.me/endless_live")}
-            className="hover:scale-110 transition-transform w-[40px] h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
           >
-            <Image src={Telegram} alt="icon" className="w-[30px] h-[30px]" />
+            <Image
+              src={Telegram}
+              alt="telegram-image"
+              className="w-[25px] md:w-[30px]"
+            />
           </button>
           <button
+            className="hover:scale-110 transition-transform w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
             onClick={() =>
               (window.location.href =
                 "https://www.instagram.com/abdukadirovv._a/")
             }
-            className="hover:scale-110 transition-transform w-[40px] h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
           >
-            <Image src={Instagram} alt="icon" className="w-[20px] h-[22px]" />
+            <Image
+              src={Instagram}
+              alt="instagram-image"
+              className="w-[18px] md:w-[22px]"
+            />
           </button>
           <button
+            className="hover:scale-110 transition-transform w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
             onClick={() =>
               (window.location.href =
                 "https://www.facebook.com/profile.php?id=100089769144656")
             }
-            className="hover:scale-110 transition-transform w-[40px] h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
           >
-            <Image src={Facebook} alt="icon" className="h-[25px]" />
+            <Image
+              src={Facebook}
+              alt="facebook-image"
+              className="w-[18px] md:w-[22px]"
+            />
           </button>
         </div>
-        <h3 className="text-white md:hidden text-sm mb-[30px] opacity-80">
+        <p className="text-white text-sm mt-4 md:mt-0 md:hidden md:text-base md:ml-4 opacity-80 text-center md:text-left">
           © 2024 Copyright. HouseLab. Все права защищены.
-        </h3>
+        </p>
       </div>
     </div>
+   </div>
   );
 };
 

@@ -18,7 +18,7 @@ const Demo = () => {
       height={10}
     />
   </div>
-  <div className="w-full px-10 md:w-[400px] mt-8 md:mt-0">
+  <div className="w-full md:px-0 px-20 md:w-[400px] mt-8 md:mt-0">
     <label htmlFor="name" className="text-[16px] md:text-[18px]">
       Ваше имя
     </label>
@@ -27,7 +27,7 @@ const Demo = () => {
       type="text"
       id="name"
       placeholder="Ваше имя"
-      className="w-full h-[50px] md:h-[60px] p-2 rounded-lg outline-none border-4 border-opacity-55 border-[#28a18f]"
+      className="w-full h-[50px] md:h-[60px] p-4 rounded-lg outline-none border-4 border-opacity-55 border-[#28a18f]"
     />
     <br />
     <br />
@@ -39,7 +39,7 @@ const Demo = () => {
       type="number"
       id="number"
       placeholder="Номер телефона"
-      className="w-full h-[50px] md:h-[60px] p-2 rounded-lg outline-none border-4 border-opacity-55 border-[#28a18f]"
+      className="w-full h-[50px] md:h-[60px] p-4 rounded-lg outline-none border-4 border-opacity-55 border-[#28a18f]"
     />
     <button
       type="button"

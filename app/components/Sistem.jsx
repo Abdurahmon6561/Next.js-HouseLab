@@ -30,7 +30,8 @@ const AboutProject = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:justify-around p-4">
+    <div className="container relative mx-auto flex items-center justify-center md:mt-[80px] md:mb-[180px]">
+    <div className="flex flex-col gap-[180px] md:flex-row items-center justify-center md:justify-around p-4">
       <Image
         id="project-image"
         className={`mt-8 w-full max-w-[440px] h-auto border-white border-none rounded-lg transition-transform duration-1000 ${
@@ -39,7 +40,7 @@ const AboutProject = () => {
         src={houseLAb}
         alt="Project Image"
       />
-      <div className="mt-8 md:mt-0 md:text-left flex flex-col items-center md:items-start">
+      <div className="mt-[-90px] md:mt-0 md:text-left flex flex-col items-center md:items-start">
         <h1 className="mb-4 text-[#28a18f] font-semibold text-2xl md:text-3xl">
           СИСТЕМА HOUSELAB
         </h1>
@@ -50,6 +51,7 @@ const AboutProject = () => {
           HOUSELAB потребовалось бы гораздо больше времени.
         </p>
       </div>
+    </div>
     </div>
   );
 };
