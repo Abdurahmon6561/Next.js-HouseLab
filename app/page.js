@@ -78,7 +78,7 @@ const Home = () => {
               />
             </svg>
           </div>
-          <div className="md:hidden absolute w-[1500px] ml-[-400px] md:h-screen inset-0 z-0 overflow-hidden  mt-[200px]">
+          <div className="md:hidden absolute w-[1500px] ml-[-500px] md:h-screen inset-0 z-0 overflow-hidden  mt-[200px]">
             <svg
               version="1.1"
               id="Layer_1"
