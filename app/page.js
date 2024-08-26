@@ -118,7 +118,6 @@ const Home = () => {
               >
                 Login
               </a>
-
               <button
                 onClick={handleScrollToObjects}
                 className="bg-[#28a18f] hover:bg-[#197063] p-2 rounded-2xl text-white border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
