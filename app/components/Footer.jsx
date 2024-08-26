@@ -48,7 +48,7 @@ const Footer = () => {
               <Image
                 src={Mail}
                 alt="mail_image"
-                className="w-[23px] md:w-[25px] md:mt-4"
+                className="w-[23px] md:w-[28px] md:mt-4"
               />
               <a
                 href="mailto:hi@houselab.uz"
