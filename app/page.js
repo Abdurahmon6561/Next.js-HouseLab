@@ -80,7 +80,7 @@ const Home = () => {
           </div>
           {/* Background Animation */}
 
-          <div className=" fixed top-0 left-0 right-0 md:backdrop-blur md:bg-white/50  bg-white/95 container  mx-auto  z-10 w-screen p-3 flex items-center justify-between">
+          <div className=" fixed top-0 left-0 right-0  bg-white/95 container  mx-auto  z-10 w-screen p-3 flex items-center justify-between">
             <div>
               <Image
                 className="w-[170px] cursor-pointer"
