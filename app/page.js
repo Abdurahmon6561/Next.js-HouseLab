@@ -80,7 +80,7 @@ const Home = () => {
           </div>
           {/* Background Animation */}
 
-          <div className=" fixed top-0 left-0 right-0  bg-white/95 container  mx-auto  z-10 w-screen p-3 flex items-center justify-between">
+          <div className=" fixed top-0 left-0 right-0 md:backdrop-blur md:bg-white/50   bg-white/95 container  mx-auto  z-10 w-screen p-3 flex items-center justify-between">
             <div>
               <Image
                 className="w-[170px] cursor-pointer"
@@ -116,7 +116,7 @@ const Home = () => {
                 className="hover:bg-slate-200 p-2 rounded-2xl text-[#28a18f] font-medium border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
                 target="_blank"
               >
-                Войти
+                Login
               </a>
 
               <button
