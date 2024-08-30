@@ -68,42 +68,37 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex space-x-3 md:mt-[-15px]">
-          <button
+          
+            <a href="https://t.me/endless_live"
             className="hover:scale-110 transition-transform w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
-            onClick={() => (window.location.href = "https://t.me/endless_live")}
-          >
+            target="_blank"
+            >
             <Image
               src={Telegram}
               alt="telegram-image"
               className="w-[25px] md:w-[30px]"
             />
-          </button>
-          <button
+            </a>
+            <a href="https://www.instagram.com/abdukadirovv._a/"
             className="hover:scale-110 transition-transform w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
-            onClick={() =>
-              (window.location.href =
-                "https://www.instagram.com/abdukadirovv._a/")
-            }
-          >
+            target="_blank">
             <Image
               src={Instagram}
               alt="instagram-image"
+              target="_blank"
               className="w-[18px] md:w-[22px]"
             />
-          </button>
-          <button
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100089769144656"
             className="hover:scale-110 transition-transform w-[35px] h-[35px] md:w-[40px] md:h-[40px] bg-[#28a18f] rounded-full flex items-center justify-center"
-            onClick={() =>
-              (window.location.href =
-                "https://www.facebook.com/profile.php?id=100089769144656")
-            }
-          >
+            target="_blank"
+            >
             <Image
               src={Facebook}
               alt="facebook-image"
               className="w-[18px] md:w-[22px]"
             />
-          </button>
+            </a>
         </div>
         <p className="text-white text-sm mt-4 md:mt-0 md:hidden md:text-base md:ml-4 opacity-80 text-center md:text-left">
           © 2024 Copyright. HouseLab. Все права защищены.

@@ -30,7 +30,7 @@ const AboutProject = () => {
   }, []);
 
   return (
-    <div className="container relative mx-auto flex items-center justify-center md:mt-[80px] md:mb-[180px]">
+    <div className="container relative mx-auto flex items-center justify-center md:mb-[180px]">
     <div className="flex flex-col gap-[180px] md:flex-row items-center justify-center md:justify-around p-4">
       <Image
         id="project-image"

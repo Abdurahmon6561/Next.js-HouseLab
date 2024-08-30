@@ -52,7 +52,7 @@ const Sistem = () => {
       </div>
       <Image
         id="sistem-image"
-        className={`w-[500px] md:mr-[60px] md:w-[600px] h-auto mt-8 md:mt-0 transition-transform duration-1000 ${inView ? 'animate-slide-in' : 'opacity-0'}`}
+        className={`w-[450px] md:mr-[60px] md:w-[600px] h-auto mt-8 md:mt-0 transition-transform duration-1000 ${inView ? 'animate-slide-in' : 'opacity-0'}`}
         src={Obyect}
         alt="Sistem image"
       />

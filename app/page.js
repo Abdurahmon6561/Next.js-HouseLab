@@ -11,6 +11,8 @@ import Logo from "../public/logo.svg";
 import "./globals.css";
 import "./animation.css";
 import Image from "next/image";
+import Bubbles from "./components/Bubbles";
+import "./components/bubbles.module.css"
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +36,177 @@ const Home = () => {
     }
   }, []);
 
+
   return (
     <div className=" content-center container">
       <div className="w-screen h-screen overflow-x-hidden">
-        <div className="w-screen h-screen relative bg-[#f8fcfb]">
+        
+    
+        {/* Header */}
+        <div className=" fixed top-0 left-0 right-0 md:backdrop-blur md:bg-white/50  bg-[#f8fcfb]/95 container  mx-auto  z-10 w-screen p-3 flex items-center justify-between">
+          <div>
+            <Image className="w-[170px] cursor-pointer" src={Logo} alt="Logo" />
+          </div>
+          <div className="hidden md:flex flex-1 ml-[150px] justify-center"></div>
+          <div className="flex gap-2 ml-[-60px]">
+            <a
+              href="tel:+998712001133"
+              className="hidden md:flex items-center mr-[10px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="#28a18f"
+                className="w-[22px] hover:animate-vibrate-once"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                />
+              </svg>
+              +998 71 200 11 33
+            </a>
+
+            <a
+              href="https://app.houselab.uz/"
+              className="hover:bg-slate-200 p-2 rounded-2xl text-[#28a18f] font-medium border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
+              target="_blank"
+            >
+              Войти
+            </a>
+
+            <button
+              onClick={handleScrollToObjects}
+              className="bg-[#28a18f] hover:bg-[#197063] p-2 rounded-2xl text-white border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
+            >
+              Демо-доступ
+            </button>
+          </div>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-black focus:outline-none"
+          >
+            {isMenuOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            )}
+          </button>
+          <div
+            className={`fixed top-0 right-0 w-64 h-full bg-gray-800 text-white transition-transform transform ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            } md:hidden`}
+          >
+            <div className="flex ml-[185px] mt-[-5px] p-8">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="text-white"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <ul className="flex flex-col mt-[-20px] p-4 space-y-4">
+              <div className=" flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="#28a18f"
+                  className="w-[22px] mt-[3px]"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                  />
+                </svg>
+
+                <a href="tel:+998712001133" className="items-center ml-[6px]">
+                  +998 71 200 11 33
+                </a>
+              </div>
+            </ul>
+            <div className="p-4">
+              <button className="hover:bg-slate-200 w-full p-2 rounded-2xl text-[#28a18f] border-[#28a18f] border-2 transition-transform ease-in-out transform">
+                <a href="https://app.houselab.uz/" target="_blank">
+                  Войти
+                </a>
+              </button>
+              <button
+                onClick={handleScrollToObjects}
+                className="bg-[#28a18f] hover:bg-[#197063] border-[#28a18f] w-full mt-4 p-2 rounded-2xl text-white border-2 transition-transform ease-in-out transform"
+              >
+                Демо-доступ
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* Header */}
+
+        {/* Bubble Animation */}
+        <div className=" absolute inset-0">
+          <iframe
+            src="https://lottie.host/embed/fb7c51d5-3383-4ca6-99e5-aa0d05d712a4/LQ0s3l6WVk.json"
+            frameBorder="0"
+             className=" opacity-20"
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "none",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: -1,
+            }}
+            allowFullScreen
+          ></iframe>
+        </div>
+        {/* Bubble Animation */}
+
+        <div className="w-screen h-screen relative bg-white ">
           {/* Background Animation */}
           <div className=" hidden md:block absolute md:w-full md:h-screen inset-0 z-0 overflow-hidden mt-[320px] ml-[50px] md:ml-[80px] md:mt-[200px]">
             <svg
@@ -47,8 +216,8 @@ const Home = () => {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               x="0px"
               y="0px"
-              width="100vw" 
-              height="100vh" 
+              width="100vw"
+              height="100vh"
               viewBox="0 0 1000 600"
               xmlSpace="preserve"
               className="absolute top-0 left-0"
@@ -86,8 +255,8 @@ const Home = () => {
               xmlnsXlink="http://www.w3.org/1999/xlink"
               x="0px"
               y="0px"
-              width="1500px" 
-              height="100vh" 
+              width="1500px"
+              height="100vh"
               viewBox="0 0 1000 600"
               xmlSpace="preserve"
               className="absolute top-0 left-0"
@@ -119,153 +288,7 @@ const Home = () => {
           </div>
           {/* Background Animation */}
 
-          <div className=" fixed top-0 left-0 right-0 md:backdrop-blur md:bg-white/50  bg-white/95 container  mx-auto  z-10 w-screen p-3 flex items-center justify-between">
-            <div>
-              <Image
-                className="w-[170px] cursor-pointer"
-                src={Logo}
-                alt="Logo"
-              />
-            </div>
-            <div className="hidden md:flex flex-1 ml-[150px] justify-center"></div>
-            <div className="flex gap-2 ml-[-60px]">
-              <a
-                href="tel:+998712001133"
-                className="hidden md:flex items-center mr-[10px]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#28a18f"
-                  className="w-[22px] hover:animate-vibrate-once"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                  />
-                </svg>
-                +998 71 200 11 33
-              </a>
-
-              <a
-                href="https://app.houselab.uz/"
-                className="hover:bg-slate-200 p-2 rounded-2xl text-[#28a18f] font-medium border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
-                target="_blank"
-              >
-                Войти
-              </a>
-
-              <button
-                onClick={handleScrollToObjects}
-                className="bg-[#28a18f] hover:bg-[#197063] p-2 rounded-2xl text-white border-2 transition-transform ease-in-out transform border-[#28a18f] hidden md:block"
-              >
-                Демо-доступ
-              </button>
-            </div>
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-black focus:outline-none"
-            >
-              {isMenuOpen ? (
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              ) : (
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  ></path>
-                </svg>
-              )}
-            </button>
-            <div
-              className={`fixed top-0 right-0 w-64 h-full bg-gray-800 text-white transition-transform transform ${
-                isMenuOpen ? "translate-x-0" : "translate-x-full"
-              } md:hidden`}
-            >
-              <div className="flex ml-[185px] mt-[-5px] p-8">
-                <button
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <ul className="flex flex-col mt-[-20px] p-4 space-y-4">
-                <div className=" flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="#28a18f"
-                    className="w-[22px] mt-[3px]"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                    />
-                  </svg>
-
-                  <a href="tel:+998712001133" className="items-center ml-[6px]">
-                    +998 71 200 11 33
-                  </a>
-                </div>
-              </ul>
-              <div className="p-4">
-                <button className="hover:bg-slate-200 w-full p-2 rounded-2xl text-[#28a18f] border-[#28a18f] border-2 transition-transform ease-in-out transform">
-                  <a href="https://app.houselab.uz/" target="_blank">
-                    Войти
-                  </a>
-                </button>
-                <button
-                  onClick={handleScrollToObjects}
-                  className="bg-[#28a18f] hover:bg-[#197063] border-[#28a18f] w-full mt-4 p-2 rounded-2xl text-white border-2 transition-transform ease-in-out transform"
-                >
-                  Демо-доступ
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="container relative mx-auto flex items-center justify-center min-h-screen ">
+          {/* <div className="container relative mx-auto flex items-center justify-center min-h-screen ">
             <div className=" text-center py-10 px-4 sm:px-6 lg:px-8">
               <h2 className="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl leading-tight mb-4 text-gray-900">
                 Простая и недорогая онлайн-платформа для <br /> продажи
@@ -284,10 +307,11 @@ const Home = () => {
                 Записаться на демо
               </button>
             </div>
-          </div>
+          </div> */}
+          <Bubbles handleScrollToObjects={handleScrollToObjects} />
         </div>
 
-        <div className="">
+        <div className=" relative backdrop-blur">
           <Sistem />
           <Objects />
           <Sale />

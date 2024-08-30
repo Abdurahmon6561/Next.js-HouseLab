@@ -44,7 +44,7 @@ const Prezentation = () => {
       </div>
       <Image
         id="prezentation-image"
-        className={`w-[450px] md:w-[550px] h-auto mt-8 mb-[60px] md:mt-0 transition-transform duration-1000 ${
+        className={`w-[400px] md:w-[550px] h-auto mt-8 mb-[60px] md:mt-0 transition-transform duration-1000 ${
           isImageVisible ? "slide-in-left" : "opacity-0"
         }`}
         src={Pre}
